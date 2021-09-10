@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run video_streamlit.py
+web: sh setup.sh && streamlit run HSVEdit.py
