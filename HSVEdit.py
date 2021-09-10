@@ -19,9 +19,7 @@ val = st.slider('Value',0,155,default)
 
 l_b = np.array([Hue[0],Sat[0],val[0]])
 u_b = np.array([Hue[1],Sat[1],val[1]])
-
-mask = cv2.inRange(hsv,l_b,u_b)
-
-res = cv2.bitwise_and(img,img,mask=mask)
-
-st.image(res)
+if userinput:
+    mask = cv2.inRange(hsv,l_b,u_b)
+    res = cv2.bitwise_and(img,img,mask=mask)
+    st.image(res)
